@@ -160,7 +160,7 @@ module pro_micro(width, height)
                     cube([width, wall * 2, height]);
                 }
             }
-            mirror() {
+            mirror([1,0,0]) {
                 translate([-width / 2, 0, -height - (height / 1.5)]) {
                     rotate([0, -30, 0]) {
                         cube([width, wall * 2, height]);
@@ -260,7 +260,7 @@ module levinson_bottom_rigth()
 
 module levinson_bottom_left()
 {
-    mirror() {
+    mirror([1,0,0]) {
         levinson_bottom_rigth();
     }
 }
@@ -296,7 +296,7 @@ module levinson_top_right(left = false)
 
 module levinson_top_left()
 {
-    mirror() {
+    mirror([1,0,0]) {
         levinson_top_right(left = true);
     }
 }
